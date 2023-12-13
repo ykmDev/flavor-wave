@@ -5,6 +5,8 @@ composer self-update --2
 
 composer -v
 
+sudo apt install php8.1-gd
+
 composer install --working-dir=/var/www/html
 
 echo 'Install npm package'

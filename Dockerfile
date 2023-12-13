@@ -16,5 +16,9 @@ ENV LOG_CHANNEL stderr
  
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
+
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
+
+RUN install-php-extensions zip
  
 CMD ["/start.sh"]
