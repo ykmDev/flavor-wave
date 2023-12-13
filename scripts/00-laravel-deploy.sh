@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 echo 'Running composer'
 
+composer -v
+
 composer install --working-dir=/var/www/html
+
+echo 'Install npm package'
+npm install
  
 echo 'Caching config...'
 php artisan config:cache
