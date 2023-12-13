@@ -3,7 +3,7 @@ echo 'Running composer'
 composer global require hirak/prestissimo
 composer install --no-dev --working-dir=/var/www/html
 
-composer global self-update
+composer self-update --2
  
 echo 'Caching config...'
 php artisan config:cache
