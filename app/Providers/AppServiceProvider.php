@@ -21,8 +21,11 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
+        if (env('APP_ENV') == 'production') {
+            $url->forceScheme('https');
+        }
         Schema::defaultStringLength(191);
 
         // Collection::macro('paginate', function ($perPage, $total = null, $page = null, $pageName = 'page') {
