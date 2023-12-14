@@ -11,6 +11,8 @@ composer install --working-dir=/var/www/html
 
 echo 'Install npm package'
 npm install
+
+npm run dev
  
 echo 'Caching config...'
 php artisan config:cache
