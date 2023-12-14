@@ -10,7 +10,10 @@ sudo apt install php8.1-gd
 composer install --working-dir=/var/www/html
 
 echo 'Install npm package'
+
 npm install
+
+echo 'RUN dev env'
 
 npm run dev
  
